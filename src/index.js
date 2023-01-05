@@ -15,8 +15,6 @@ function Greeting() {
               <a href="#">Click here</a>
             </li>
           </ul>
-          <img src="" alt="Test me first" />
-          <input type="text" name="" id="" />
         </section>
       </React.Fragment>
     </>
@@ -47,4 +45,14 @@ function welcome() {
 // close every element
 // formatting
 
-ReactDOM.render(<Greeting />, document.getElementById("root"));
+// Now we are talking about Nested ReactJS compoents
+const NestedComponents = () => {
+  return (
+    <div>
+      <h5>Nested components is working fine</h5>
+      <Greeting />
+    </div>
+  );
+};
+
+ReactDOM.render(<NestedComponents />, document.getElementById("root"));

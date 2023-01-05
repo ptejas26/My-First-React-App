@@ -1,17 +1,50 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// stateless functional component
+// always needs to retun JSK, if it return the
+function Greeting() {
+  // <> </> is a fragment
+  return (
+    <>
+      <React.Fragment>
+        <section className="">
+          <h3> Hello World </h3>
+          <ul>
+            <li>
+              <a href="#">Click here</a>
+            </li>
+          </ul>
+          <img src="" alt="Test me first" />
+          <input type="text" name="" id="" />
+        </section>
+      </React.Fragment>
+    </>
+  );
+}
+function welcome() {
+  console.log("welcome");
+}
+// This is another way of creating a component
+// const Greeting = () => {
+//   return React.createElement("h11", {}, "Hello world");
+// };
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//This can go messy too quickly
+// const NewGreeting = () => {
+//   return React.createElement(
+//     "article",
+//     {},
+//     React.createElement("h1", {}, "Works like a charm")
+//   );
+// };
+
+//JSX Rules
+// always return a single element
+// div / section / articles or fragment
+// use camelCase for html attributes
+// className instead of class
+// close every element
+// formatting
+
+ReactDOM.render(<Greeting />, document.getElementById("root"));

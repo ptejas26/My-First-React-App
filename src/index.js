@@ -20,9 +20,6 @@ function Greeting() {
     </>
   );
 }
-function welcome() {
-  console.log("welcome");
-}
 // This is another way of creating a component
 // const Greeting = () => {
 //   return React.createElement("h11", {}, "Hello world");
@@ -46,11 +43,14 @@ function welcome() {
 // formatting
 
 // Now we are talking about Nested ReactJS compoents
+const Person = () => <h5>Tejas Patelia</h5>;
+
 const NestedComponents = () => {
   return (
     <div>
       <h5>Nested components is working fine</h5>
       <Greeting />
+      <Person />
     </div>
   );
 };
